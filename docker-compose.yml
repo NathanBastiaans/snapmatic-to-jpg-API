@@ -1,0 +1,14 @@
+---
+version: '3.7'
+
+services:
+
+  snapmatic-to-jpg-api:
+    container_name: snapmatic-to-jpg-api
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+      target: builder
+    ports:
+      - "8580:8080"
+...
