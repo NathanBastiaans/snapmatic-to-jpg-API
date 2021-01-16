@@ -1,8 +1,9 @@
 package web
 
 import (
-	"github.com/gin-gonic/gin"
 	"snapmatic-to-jpg/src/business"
+
+	"github.com/gin-gonic/gin"
 )
 
 // Service contains the dependencies
@@ -25,8 +26,8 @@ func InitRouter() *gin.Engine {
 	router := gin.New()
 	router.Use(gin.Recovery())
 
-	gin.SetMode(gin.DebugMode)
-	// gin.SetMode(gin.ReleaseMode)
+	// gin.SetMode(gin.DebugMode)
+	gin.SetMode(gin.ReleaseMode)
 
 	return router
 }
